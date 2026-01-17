@@ -55,54 +55,6 @@ contactForm.addEventListener('submit', function(e) {
     }
 });
 
-// Add a simple testimonial slider functionality
-const testimonials = [
-    {
-        content: "Lucky & Fluffy exceeded all my expectations! My golden retriever had the best week of his life while we were away. They sent daily photos and updates, and Max came home happy and relaxed. Couldn't ask for better care!",
-        author: "Sarah Johnson",
-        role: "Max's Mom (Golden Retriever)",
-        avatar: "https://randomuser.me/api/portraits/women/44.jpg"
-    },
-    {
-        content: "Our cat Luna is usually very shy, but she warmed up to the Lucky & Fluffy staff immediately. The grooming service is exceptional - she came back looking beautiful and smelling wonderful. We're regular customers now!",
-        author: "Michael Chen",
-        role: "Luna's Dad (Persian Cat)",
-        avatar: "https://randomuser.me/api/portraits/men/32.jpg"
-    },
-    {
-        content: "The daycare service at Lucky & Fluffy is a lifesaver! My energetic labrador gets to socialize and burn off energy while I'm at work. The staff truly cares about each pet's individual needs and personality.",
-        author: "Jessica Williams",
-        role: "Buddy's Mom (Labrador)",
-        avatar: "https://randomuser.me/api/portraits/women/68.jpg"
-    }
-];
-
-let currentTestimonial = 0;
-const testimonialSlide = document.querySelector('.testimonial-slide');
-
-function rotateTestimonial() {
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    const testimonial = testimonials[currentTestimonial];
-    
-    testimonialSlide.innerHTML = `
-        <div class="testimonial-content">
-            "${testimonial.content}"
-        </div>
-        <div class="testimonial-author">
-            <div class="author-avatar">
-                <img src="${testimonial.avatar}" alt="${testimonial.author}">
-            </div>
-            <div class="author-info">
-                <h4>${testimonial.author}</h4>
-                <p>${testimonial.role}</p>
-            </div>
-        </div>
-    `;
-}
-
-// Rotate testimonials every 8 seconds
-setInterval(rotateTestimonial, 8000);
-
 // Add scroll animation for sections
 window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
